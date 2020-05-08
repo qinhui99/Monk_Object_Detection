@@ -99,9 +99,9 @@ class Detector():
                                                                 **self.system_dict["local"]["val_params"])
 
 
-    def Model(self,gpu_devices=[0]):
+    def Model(self,gpu_devices=[0],compound_coef=0):
         num_classes = self.system_dict["local"]["training_set"].num_classes();
-        efficientdet = EfficientDet(num_classes=num_classes)
+        efficientdet = EfficientDet(num_classes=num_classes,compound_coef=compound_coef)
 
         if self.system_dict["params"]["use_gpu"]:
             self.system_dict["params"]["gpu_devices"] = gpu_devices
