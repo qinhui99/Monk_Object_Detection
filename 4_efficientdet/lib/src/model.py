@@ -206,8 +206,8 @@ class EfficientDet(nn.Module):
 
         self.conv3 = nn.Conv2d(48, self.num_channels, kernel_size=1, stride=1, padding=0)#40
         self.conv4 = nn.Conv2d(96, self.num_channels, kernel_size=1, stride=1, padding=0)#80
-        self.conv5 = nn.Conv2d(192, self.num_channels, kernel_size=1, stride=1, padding=0)#192
-        self.conv6 = nn.Conv2d(192, self.num_channels, kernel_size=3, stride=2, padding=1)#192
+        self.conv5 = nn.Conv2d(232, self.num_channels, kernel_size=1, stride=1, padding=0)#192
+        self.conv6 = nn.Conv2d(232, self.num_channels, kernel_size=3, stride=2, padding=1)#192
         self.conv7 = nn.Sequential(nn.ReLU(),
                                    nn.Conv2d(self.num_channels, self.num_channels, kernel_size=3, stride=2, padding=1))
 
